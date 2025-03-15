@@ -3,6 +3,8 @@
 ## ❀ About
 A cute theme based on March 7th from Honkai: Star Rail. Base theme is based on Midnight-discord by [refact0r](https://github.com/refact0r). For both Preservation & Hunt Path!
 <br /> <br />
+> [!CAUTION]
+> Go to [refresh](https://github.com/cinnakoko/March-7th-Discord-Theme/tree/main/refresh) if you are using the new Discord UI.
 <img align="center" src="https://raw.githubusercontent.com/kubiikoko/March-7th-Discord-Theme/refs/heads/main/assets/eQuBUmk.png">
 
 ## ❀ Install
