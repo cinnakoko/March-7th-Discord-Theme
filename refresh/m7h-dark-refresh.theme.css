@@ -1,0 +1,209 @@
+/**
+ * @name midnight
+ * @description A dark, rounded discord theme.
+ * @author refact0r
+ * @version 2.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    /* font, change to '' for default discord font */
+    --font: 'figtree';
+
+    /* sizes */
+    --gap: 12px; /* spacing between panels */
+    --divider-thickness: 4px; /* thickness of unread messages divider and highlighted message borders */
+
+    /* animation/transition options */
+    --animations: on; /* turn off to disable all midnight animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+
+    /* top bar options */
+    --move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
+    --custom-app-top-bar-height: 32px; /* height of the titlebar/top bar */
+    
+    /* window controls */
+    --custom-window-controls: on; /* turn off to use discord default window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button icon options */
+    --dms-icon: on; /* set to default to use discord icon, on to use custom icon, off to disable completely */
+    --dms-icon-svg-url: url('https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/1185f75db623bd740f4a42f69abcb67dde1b01ce/assets/Asset%204.svg'); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-size: 90%; /* size of the svg (css mask-size) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --guild-boosting-blue: #FF9A56, #D162A4, #FFFFFF;
+    --guild-boosting-purple: #FFFFFF, #D162A4, #FF9A56;
+
+    /* dms button background options */
+    --dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
+
+    /* background image options */
+    /*  --background-image: on; /* turn on to use a background image */
+    /*  --background-image-url: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true'); /* url of the background image */
+    
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: on; /* turn on to remove some elements for better transparency */
+    --remove-bg-layer: on; /* turn on to remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: on; /* turn on to blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
+
+    /* other options */
+    --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+}
+
+/* color options */
+:root {
+    --colors: on; /* turn off to use discord default colors */
+ /*
+    --background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
+      
+    
+    /* text colors */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: hsl(220, 45%, 95%); /* other normally white text */
+    --text-2: hsl(220, 25%, 70%); /* headings and important text */
+    --text-3: hsl(220, 20%, 60%); /* normal text */
+    --text-4: hsl(222, 6%, 57%); /* icon buttons and channels */
+    --text-5: hsl(219, 9%, 44%); /* muted channels/chats and timestamps */
+ 
+	--backgroundblur: 0;
+    /* background and dark colors */
+    --bg-1: hsla(64, 81%, 67%, 0.308); /* dark buttons when clicked */
+	--bg-2: hsla(64, 86%, 54%, 0.308); /* dark buttons */
+	--bg-3: #4a1b1f; /* spacing, secondary elements */
+	--bg-4: hsla(323, 36%, 23%, 0.7); /* main background color */
+    --hover: hsla(221, 19%, 40%, 0.1); /* channels and buttons when hovered */
+    --active: hsla(220, 19%, 40%, 0.2); /* channels and buttons when clicked or selected */
+    --active-2: hsla(220, 19%, 40%, 0.3); /* extra state for transparent buttons */
+    --message-hover: hsla(230, 0%, 0%, 0.1); /* messages when hovered */
+
+    /* accent colors */
+    --accent-1: #F2D0D9; /* links */
+	--accent-2: #F2D888; /* general unread/mention elements */
+	--accent-3: #ee8ea8; /* accent buttons */
+	--accent-4: #eb819e; /* accent buttons when hovered */
+	--accent-5: hsl(344, 81%, 67%);  /* accent buttons when clicked */
+    --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 60%, transparent); /* background of messages that mention you */
+    --mention-hover: linear-gradient(
+        to right,
+        color-mix(in hsl, var(--accent-2), transparent 95%) 60%,
+        transparent
+    ); /* background of messages that mention you when hovered */
+    --accent-new: hsl(344, 81%, 67%); /* stuff that's normally red like mute/deafen buttons */
+
+    /* status indicator colors */
+    --online: #a6da95; /* change to #44a25b for default */
+    --dnd: #ed8796; /* change to #d83a42 for default */
+    --idle: #eed49f; /* change to #c99656 for default */
+    --streaming: #c6a0f6; /* change to #593695 for default */
+    --offline: var(--text-4); /* change to #83838b for default offline color */
+
+    /* border colors */
+    --border-light: hsl(230, 20%, 40%, 0.1); /* light border color */
+    --border: hsl(230, 20%, 40%, 0.2); /* normal border color */
+    --button-border: hsl(0, 0%, 100%, 0.1); /* neutral border color of buttons */
+
+    /* base colors */
+    --red-1: oklch(76% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(64% 0.12 0);
+    --red-4: oklch(58% 0.12 0);
+    --red-5: oklch(52% 0.12 0);
+
+    --green-1: oklch(76% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(64% 0.11 170);
+    --green-4: oklch(58% 0.11 170);
+    --green-5: oklch(52% 0.11 160);
+
+    --blue-1: oklch(76% 0.1 215);
+    --blue-2: oklch(70% 0.1 215);
+    --blue-3: oklch(64% 0.1 215);
+    --blue-4: oklch(58% 0.1 215);
+    --blue-5: oklch(52% 0.1 215);
+
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(74% 0.11 90);
+    --yellow-3: oklch(68% 0.11 90);
+    --yellow-4: oklch(62% 0.11 90);
+    --yellow-5: oklch(56% 0.11 90);
+
+    --purple-1: oklch(76% 0.11 310);
+    --purple-2: oklch(70% 0.11 310);
+    --purple-3: oklch(64% 0.11 310);
+    --purple-4: oklch(58% 0.11 310);
+    --purple-5: oklch(52% 0.11 310);
+}
+/*
+body {
+    background: var(--background-image) no-repeat center center fixed;
+    background-size: cover;
+  }
+*/
+
+.visual-refresh .button_e131a9.buttonColor_e131a9, .visual-refresh .button_e131a9 .buttonColor_e131a9 {
+    background-color: #ce8e9f;
+    color: #F2D0D9;
+    border-color: var(--border-faint);
+    --interactive-active: #F2D0D9;
+}
+.visual-refresh .iconBadge__650eb.base__2b1f5 {
+    color: #F2D0D9;
+
+}
+.visual-refresh .content_c48ade {
+    background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
+}
+
+.bar_c38106[data-windows=true]{
+    background-image: url('https://github.com/cinnakoko/March-7th-Discord-Theme/blob/main/assets/march%207th%20hunt%20dark.png?raw=true');
+}
+
+
+.itemsContainer_ef3116, .tree_ef3116 {
+    background-color: rgba(80, 38, 64); 
+}
+:root {
+	--folder-icon-1: url("https://github.com/kubiikoko/March-7th-Discord-Theme/blob/main/assets/hunt%20icon%20folder.png?raw=true");
+  }
+  
+  [aria-label="Servers"] {
+	& > * {
+	  --folder-icon: var(--folder-icon-1);
+	  --position-left: 11.5px;
+	  --fill: currentColor;
+	}
+	[aria-owns^="folder-items-"] > [class^="folderIconWrapper_"] {
+	  position: relative; 
+	  [class^="closedFolderIconWrapper_"],
+	  [class^="expandedFolderIconWrapper_"] {
+		display: none;
+	  }
+	  &::after {
+		background-image: var(--folder-icon);
+		background-size: cover;
+		background-repeat: no-repeat;
+		content: "";
+		position: absolute;
+		top: 12px;
+		left: var(--position-left);
+		width: 24px;
+		height: 24px;
+	 
+	  }
+	}
+  }
