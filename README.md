@@ -4,7 +4,7 @@
 A cute theme based on March 7th from Honkai: Star Rail. Base theme is based on Midnight-discord by [refact0r](https://github.com/refact0r). For both Preservation & Hunt Path!
 <br /> <br />
 > [!CAUTION]
-> Go to [refresh](https://github.com/cinnakoko/March-7th-Discord-Theme/tree/main/refresh) if you are using the new Discord UI.
+> Go to [old](https://github.com/cinnakoko/March-7th-Discord-Theme/tree/main/old) if you are using the new Discord UI.
 <img align="center" src="https://raw.githubusercontent.com/kubiikoko/March-7th-Discord-Theme/refs/heads/main/assets/eQuBUmk.png">
 
 ## ❀ Install
@@ -12,6 +12,20 @@ A cute theme based on March 7th from Honkai: Star Rail. Base theme is based on M
 Select your theme variation from up there in the source and drag and drop to your themes folder! <br />
 
 <img align="left" src="https://i.imgur.com/LPH05EO.png" alt="BetterDiscord" width="45" height="45"> <img align="left" src="https://i.imgur.com/fXYKU5q.png" alt="Vencord" width="45" height="45"> <b><p align="left"> <br />
+
+<br> If you are on Vencord, simply copy paste the code from the variation you like below to 'Online Themes' section <br>
+
+### ✿ March 7th Preservation: Dark Mode
+`https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/refs/heads/main/m7p-dark.theme.css`
+
+### ✿ March 7th Preservation: Light Mode
+`https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/refs/heads/main/m7p-light.theme.css`
+
+### ✿ March 7th Hunt: Dark Mode
+`https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/refs/heads/main/m7h-dark.theme.css`
+
+### ✿ March 7th Hunt: Light Mode
+`https://raw.githubusercontent.com/cinnakoko/March-7th-Discord-Theme/refs/heads/main/m7h-light.theme.css`
 
 
 ## ❀ Variations
